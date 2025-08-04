@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+    <!--Conectando o JS ao Html-->
+    <script src="main.js" type="text/javascript" defer></script>
+</head>
+<body>
+    <div class="fundo">
+        <h1>Calculather</h1>
+        <div class="corpoCalc">
+            <p id="resultado"></p>
+       
+        <!--Tabela para nºs e operações-->
+        <table>
+            <!--Linha1-->
+            <tr>
+                <!-- BOTÃO "C" chama a função para limpar a tela da calculadora -->
+                <td><button class="botao"  onclick="clean()"> C </button></td>
+                <!-- Botão de voltar ">" chama a função para Apagar o último dígito (n°) -->
+                <td><button class="botao"  onclick="del()"> < </button></td>
+                <!-- Botão divisão "/" insere o caractere "/" chamando a função-->
+                <td><button class="botao"  onclick="insert('/')"> / </button></td>
+                <!-- Botão divisão "*" insere o caractere "*" chamando a função -->
+                <td><button class="botao"  onclick="insert('*')"> * </button></td>
+            </tr><!--Final da linha 1-->
+            <!--Linha2-->
+            <tr>
+                <!-- BOTÃO "7" que insere o nº 7 tela da calculadora -->
+                <td><button class="botao"  onclick="insert('7')"> 7 </button></td>
+                <!-- Botão "8" que insere o nº 8 tela da calculadora-->
+                <td><button class="botao"  onclick="insert('8')"> 8 </button></td>
+                <!-- Botão "9" que insere o nº 9 tela da calculadora-->
+                <td><button class="botao"  onclick="insert('9')"> 9 </button></td>
+                <!-- Botão de subtração "-" insere o caractere "-" chamando a função -->
+                <td><button class="botao"  onclick="insert('-')"> - </button></td>
+            </tr><!--Final da linha 2-->
+            <!--Linha3-->
+            <tr>
+                <!-- BOTÃO "4" que insere o nº 4 tela da calculadora -->
+                <td><button class="botao"  onclick="insert('4')"> 4 </button></td>
+                <!-- Botão "5" que insere o nº 5 tela da calculadora-->
+                <td><button class="botao"  onclick="insert('5')"> 5 </button></td>
+                <!-- Botão "6" que insere o nº 6 tela da calculadora-->
+                <td><button class="botao"  onclick="insert('6')"> 6 </button></td>
+                <!-- Botão de subtração "+" insere o caractere "+" chamando a função -->
+                <td><button class="botao"  onclick="insert('+')"> + </button></td>
+            </tr><!--Final da linha 3-->
+            <!--Linha4-->
+            <tr>
+                <!-- BOTÃO "1" que insere o nº 1 tela da calculadora -->
+                <td><button class="botao"  onclick="insert('1')"> 1 </button></td>
+                <!-- Botão "2" que insere o nº 2 tela da calculadora-->
+                <td><button class="botao"  onclick="insert('2')"> 2 </button></td>
+                <!-- Botão "3" que insere o nº 3 tela da calculadora-->
+                <td><button class="botao"  onclick="insert('3')"> 3 </button></td>
+                <!-- Botão de subtração "=" chamando a função calcular() -->
+                <td rowspan="2"><button class="botao" style="height: 108px;" onclick="calcular()"> = </button></td>
+            </tr><!--Final da linha 4-->
+            <!--Linha5-->
+            <tr>
+                <!-- BOTÃO "0" que insere o nº 0 tela da calculadora -->
+                <td colspan="2"><button class="botao" style="width: 106px;"  onclick="insert('0')"> 0 </button></td>
+                <!-- Botão "." que insere o ponto como separador decimal na tela da calculadora-->
+                <td><button class="botao"  onclick="insert('.')"> . </button></d>  
+            </tr>
+        </table>
+        </div><!--Fim da div corpoCalc-->
+    </div><!--Fim da div fundo-->
+</body>
+</html>
